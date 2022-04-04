@@ -17,4 +17,4 @@ display one by one image of person which is stored in find_name_images directory
 find face from images and display the name of person with the use of face_enc file measurments.
 
 ### Link of Video
-#### [Demo](https://choosealicense.com/licenses/mit/)
+#### [Demo](https://drive.google.com/file/d/1jLs44PFLaF50rrHayhA8mfEL6XDph1e6/view?usp=sharing)

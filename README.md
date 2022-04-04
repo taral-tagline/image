@@ -18,3 +18,5 @@ find face from images and display the name of person with the use of face_enc fi
 
 ### Link of Video
 #### [Demo](https://drive.google.com/file/d/1jLs44PFLaF50rrHayhA8mfEL6XDph1e6/view?usp=sharing)
+
+#### [Demo_of WebCam](https://drive.google.com/file/d/1dQc8-N1G4RdYtcNrqhmsv9O7fTv1ASSW/view?usp=sharing)

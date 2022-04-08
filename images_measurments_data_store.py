@@ -4,7 +4,7 @@ import pickle
 import cv2
 import os
  
-#get paths of each file in folder named machine_learn_images
+# get paths of each file in folder named machine_learn_images
 imagePaths = list(paths.list_images('machine_learn_Images'))
 knownEncodings = []
 knownNames = []
@@ -17,7 +17,7 @@ for (i, imagePath) in enumerate(imagePaths):
     name = imagePath.split(os.path.sep)[-1]
     name = name.split(".")
     name = name[0]
-    
+
     # load the input image and convert it from BGR (OpenCV ordering)
     # to dlib ordering (RGB)
     image = cv2.imread(imagePath)
@@ -34,10 +34,10 @@ for (i, imagePath) in enumerate(imagePaths):
         knownEncodings.append(encoding)
         knownNames.append(name)
 
-# save emcodings along with their names in dictionary data
-data = {"encodings": knownEncodings, "names": knownNames}
+# # save emcodings along with their names in dictionary data
+# data = {"encodings": knownEncodings, "names": knownNames}
 
-# use pickle to save data into a file for later use
-f = open("face_enc", "wb")
-f.write(pickle.dumps(data))
-f.close()
+# # use pickle to save data into a file for later use
+# f = open("face_enc", "wb")
+# f.write(pickle.dumps(data))
+# f.close()

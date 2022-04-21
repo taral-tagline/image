@@ -28,12 +28,31 @@ face_cascade = cv2.CascadeClassifier(cascPathface)
 
 
 def gen_frames():
-    with open("face_enc", "rb") as f:
-        data = pickle.load(f)
+    data = {}
+    f = open('face_enc.pickle', "rb")
+    while 1:
+        try:
+            #print(type(pickle.load(f)))
+            data.append(pickle.load(f))
+        except EOFError:
+            break
+    
+    print(data)
+
+    # with open("face_enc.pickle", "rb") as f:
+    #     data = pickle.load(f)
     # with open('face_enc','rb') as f :
     #     print(f.readlines())
-    # data = pickle.loads(open('face_enc', "rb").read())
-    # print(data)
+    # my_data = {}
+    # f = open('face_enc.pickle', "rb")
+    # while 1:
+    #     try:
+    #         # add_data = {"encodings": knownEncodings, "names": knownNames}
+    #         my_data.append(pickle.load(f))
+    #     except EOFError:
+    #         break
+    # my_data = pickle.loads(open('face_enc.pickle', "rb").read())
+    # print(my_data)
     face_locations = []
     face_encodings = []
     face_names = []
@@ -102,7 +121,7 @@ def index():
             knownNames.append(uname)
 
         add_data = {"encodings": knownEncodings, "names": knownNames}
-        f = open("face_enc", "ab")
+        f = open("face_enc.pickle", "ab")
         f.write(pickle.dumps(add_data))
         f.close()
         # print(add_data)
